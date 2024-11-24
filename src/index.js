@@ -131,15 +131,35 @@
  * デフォルト値(引数、分割代入)
  */
 // 関数の引数のデフォルト値
-const sayHello = (name = "ゲスト") => console.log(`こんにちは${name}さん`);
-sayHello();
-sayHello("雄太");
+// const sayHello = (name = "ゲスト") => console.log(`こんにちは${name}さん`);
+// sayHello();
+// sayHello("雄太");
 
-// オブジェクトの分割代入のデフォルト値
+// // オブジェクトの分割代入のデフォルト値
+// const myProfile = {
+//     age:35
+// }
+// //分割代入を行う際にローカル変数にデフォルト値を設定する
+// const { age, name = "ゲスト" } = myProfile;
+// console.log(age);
+// console.log(name);
+
+/**
+ * オブジェクトの省略記法
+ */
+const name = "雄太";
+const age = 35;
+
 const myProfile = {
-    age:35
+    name: name,
+    age: age,
 }
-//分割代入を行う際にローカル変数にデフォルト値を設定する
-const { age, name = "ゲスト" } = myProfile;
-console.log(age);
-console.log(name);
+console.log(myProfile);
+
+// オブジェクトのプロパティ名とローカル変数が同じような
+// 上記のmyProfileのような状態の場合、以下のように省略できる
+const myProfile2 = {
+    name,
+    age,
+}
+console.log(myProfile2);
