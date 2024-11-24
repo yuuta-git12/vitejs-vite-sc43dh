@@ -66,3 +66,38 @@
 // テンプレート文字列を用いた方法
 // const message2 = `私の名前は${myname}です。年齢は${myage}歳です。`;
 // console.log(message2);
+
+
+/**
+ * アロー関数
+ */
+
+// 従来の関数
+// function func1(str) {
+//     return str;
+// };
+
+// const func1 = function(str){
+//     return str;
+// };
+// console.log(func1("func1です"));
+
+// アロー関数
+// 引数が1つの場合は引数の括弧が不要
+const func2 = str => {
+    return str;
+};
+console.log(func2("func2です"));
+
+// さらに省略した書き方
+const func2A = str => str;
+console.log(func2A("func2Aです"));
+
+const add = (num1,num2) => num1 + num2;
+console.log(add(1,2));
+
+const add_obj = (num1, num2) => ({
+    hoge: num1,
+    huga: num2,
+});
+console.log(add_obj(10,20));
