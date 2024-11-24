@@ -147,19 +147,54 @@
 /**
  * オブジェクトの省略記法
  */
-const name = "雄太";
-const age = 35;
+// const name = "雄太";
+// const age = 35;
 
-const myProfile = {
-    name: name,
-    age: age,
-}
-console.log(myProfile);
+// const myProfile = {
+//     name: name,
+//     age: age,
+// }
+// console.log(myProfile);
 
-// オブジェクトのプロパティ名とローカル変数が同じような
-// 上記のmyProfileのような状態の場合、以下のように省略できる
-const myProfile2 = {
-    name,
-    age,
-}
-console.log(myProfile2);
+// // オブジェクトのプロパティ名とローカル変数が同じような
+// // 上記のmyProfileのような状態の場合、以下のように省略できる
+// const myProfile2 = {
+//     name,
+//     age,
+// }
+// console.log(myProfile2);
+
+/**
+ * スプレッド構文 ...
+ */
+
+// 配列の展開
+const arr1 = [1,2];
+console.log(arr1);
+console.log(...arr1); // スプレッド構文で配列が展開される
+
+// 引数の全ての要素の和を返す関数
+const sumFunc = (...nums) => console.log(nums.reduce((num1,num2) => num1 + num2));
+sumFunc(10,20,...arr1);
+
+// まとめる
+const arr2 = [1,2,3,4,5];
+// 1,2はnum1,num2,　残りはnumsに代入
+const [num1,num2, ...nums] = arr2;
+console.log(num1);
+console.log(num2);
+console.log(nums);
+
+// 配列のコピー、結合
+const arr4 = [10,20];
+const arr5 = [30,40];
+
+// arr4のコピー(値渡し コピー元の値は変わらない)
+const arr6 = [...arr4];
+arr6[0] = 100;
+console.log(arr6);
+console.log(arr4);
+
+// arr4とarr5を結合したarr7(値渡し)
+const arr7 = [...arr4,...arr5];
+console.log(arr7);
