@@ -84,20 +84,45 @@
 
 // アロー関数
 // 引数が1つの場合は引数の括弧が不要
-const func2 = str => {
-    return str;
-};
-console.log(func2("func2です"));
+// const func2 = str => {
+//     return str;
+// };
+// console.log(func2("func2です"));
 
-// さらに省略した書き方
-const func2A = str => str;
-console.log(func2A("func2Aです"));
+// // さらに省略した書き方
+// const func2A = str => str;
+// console.log(func2A("func2Aです"));
 
-const add = (num1,num2) => num1 + num2;
-console.log(add(1,2));
+// const add = (num1,num2) => num1 + num2;
+// console.log(add(1,2));
 
-const add_obj = (num1, num2) => ({
-    hoge: num1,
-    huga: num2,
-});
-console.log(add_obj(10,20));
+// const add_obj = (num1, num2) => ({
+//     hoge: num1,
+//     huga: num2,
+// });
+// console.log(add_obj(10,20));
+
+/**
+ * 分割代入
+ */
+// const myProfile = {
+//     name: "雄太",
+//     age: 35,
+// }
+
+// const message1 = `私の名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
+// console.log(message1);
+
+// // オブジェクトの分割代入
+// const { name,age } = myProfile;
+// const message2 = `私の名前は${name}です。年齢は${age}歳です。`;
+// console.log(message2);
+
+// const myProfile_arr = ["雄太",35];
+// const message3 = `私の名前は${myProfile_arr[0]}です。年齢は${myProfile_arr[1]}歳です。`;
+// console.log(message3);
+
+// // 配列の分割代入
+// const [name_arr,age_arr] = myProfile_arr;
+// const message4 = `私の名前は${name_arr}です。年齢は${age_arr}歳です。`;
+// console.log(message4);
