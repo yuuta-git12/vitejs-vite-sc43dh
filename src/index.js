@@ -202,7 +202,7 @@
 /**
  * mapやfilterを使った配列の処理
  */
-const nameArr = ["田中","山田","じゃけぇ"];
+// const nameArr = ["田中","山田","じゃけぇ"];
 
 // 従来の配列要素の表示方法
 // for (let index = 0; index < nameArr.length; index++) {
@@ -220,14 +220,14 @@ const nameArr = ["田中","山田","じゃけぇ"];
 // })
 // console.log(nameArr2);
 
-const newNameArr = nameArr.map((name) => {
-    if(name !== "じゃけぇ"){
-        return `${name}さん`
-    }else{
-        return name;
-    }
-})
-console.log(newNameArr);
+// const newNameArr = nameArr.map((name) => {
+//     if(name !== "じゃけぇ"){
+//         return `${name}さん`
+//     }else{
+//         return name;
+//     }
+// })
+// console.log(newNameArr);
 
 
 
@@ -239,3 +239,22 @@ console.log(newNameArr);
 // });
 // console.log(newNumArr);
 
+/**
+ * 三項演算子
+ */
+// ある条件 ? 条件がtrueの時 : 条件がfalseの時
+// const val1 = 1 > 2 ? "trueです" : "falseです";
+// console.log(val1);
+
+// const num = 1300;
+// console.log(num.toLocaleString());
+
+// // 型が数値の時は三桁区切りでカンマ表示とし、それ以外の場合は「数値を入力してください」を返す
+// const formatteNum = typeof num === 'number' ? num.toLocaleString() : "数値を入力してください";
+// console.log(formatteNum);
+
+const checkSum = (num1,num2) => {
+    return num1 + num2 > 100 ? "100を超えています" : "許容範囲内です";
+}
+console.log(checkSum(40,50));
+console.log(checkSum(60,50));
