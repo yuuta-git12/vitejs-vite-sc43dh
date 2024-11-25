@@ -253,8 +253,47 @@
 // const formatteNum = typeof num === 'number' ? num.toLocaleString() : "数値を入力してください";
 // console.log(formatteNum);
 
-const checkSum = (num1,num2) => {
-    return num1 + num2 > 100 ? "100を超えています" : "許容範囲内です";
+// const checkSum = (num1,num2) => {
+//     return num1 + num2 > 100 ? "100を超えています" : "許容範囲内です";
+// }
+// console.log(checkSum(40,50));
+// console.log(checkSum(60,50));
+
+/**
+ * 論理演算氏の本当の意味を知ろう && ||
+ */
+// truthy,falsyについて
+// truthy:暗黙的にtrueに変換されるもの "ABC","0",10,{}
+// falsy:暗黙的にfalseに変換されるもの 0,NaN,false,"",null,undefined
+// const val = undefined;
+// if(val){
+//     console.log("valはtruthyです");
+// }else{
+//     console.log("valはfalsyです");
+// }
+
+const flag1 = true;
+const flag2 = true;
+
+if(flag1 || flag2){
+    console.log("1か2はtrueになります");
 }
-console.log(checkSum(40,50));
-console.log(checkSum(60,50));
+if(flag1&&flag2){
+    console.log("1も2もtrueになります");
+}
+
+// ||(パイプライン)　は左側がtrurhyの時その時点で値が返却する
+// numがtrueの値の場合はその時の値を返す。
+// numがfalseの場合は||の右側の値が返される。
+// 短絡評価・短絡演算と言われている。
+const num = undefined;
+const fee = num || "金額未設定です";
+console.log(fee);
+
+// &&(アンパサンド) は左側がfalsyの時、その時点で値が返却する
+// num2がtrueの場合は&&の右側の値が返される。
+// num2がfalseの場合はその時の値を返す。
+const num2 = 100;
+const fee2 = num2 && "何か設定されました";
+console.log(fee2);
+
